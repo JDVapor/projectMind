@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>mind</title>
+</head>
+
+<body>
+  <script type="text/javascript">
+    const mind = {
+
+      on: false,
+      memoryRelevance: .1,
+      inputTrigger: [],
+      memory: [
+        ['I', 'was', 'born'],
+        ['Hello']
+      ],
+
+      getInput: function() {
+        const input = prompt();
+        // console.log(input);
+        // console.log(this.memory);
+        // if (this.memory.indexOf(input.split(' ')) === -1) {
+        //   this.inputTrigger.push(input.split(' '));
+        // }
+        this.memory.push(input.split(' '));
+
+        // console.log(input);
+        // console.log(this.memory);
+        // console.log(input.split(' '));
+
+        var sum = 0;
+
+        for (var i = 0; i < this.memory.length; i++) {
+          sum += this.memory[i];
+          console.log((sum / this.memory.length) / sum);
+        }
+
+
+        for (var i = 0; i < this.memory.length; i++) {
+          if ((this.memory[i] / sum) * 100 > (sum / this.memory.length) / sum * 100) {
+
+
+          }
+        }
+        console.log(input);
+
+
+
+        // function countInArray(array, what) {
+        //   var count = 0;
+        //   for (var i = 0; i < array.length; i++) {
+        //     if (array[i] === what) {
+        //       count++;
+        //     }
+        //   }
+        //   return count;
+        // }
+        //
+        // console.log(countInArray(this.memory, input.toString()));
+
+        // console.log(this.inputTrigger);
+      },
+
+      inputRelevance: function() {
+        this.getInput();
+        // console.log(this.getInput.input);
+        if (this.memory.length >= 1) {
+
+          var random = Math.floor(Math.random() * this.memory.length);
+
+          // console.log(random);
+          const think = this.memory[random].join(' ');
+          // console.log(think);
+          alert(think);
+        }
+        // var sum = 0;
+        //
+        // for (var i = 0; i < elementCount.length; i++) {
+        //   sum += elementCount[i];
+        //   console.log((sum / elementCount.length) / sum);
+        // }
+
+        //
+        // for (var i = 0; i < elementCount.length; i++) {
+        //   if ((elementCount[i] / sum) * 100 > (sum / elementCount.length) / sum * 100) {
+        //
+        //   }
+
+        // console.log(this.input);
+
+        // this.inputTrigger.push(this.getInput.input.split(' '));
+        // }
+      }
+      //
+      // function countInArray(array, value) {
+      //   return array.reduce((n, x) => n + (x === value), 0);
+      // }
+      // console.log(this.input);
+      // console.log(countInArray(this.memory, this.input));
+
+      // alert(this.memory.split(' ')[random]);
+      // this.getInput();
+
+      // if ( === this.inputTrigger) {
+      //   this.inputTrigger.push()
+      // }
+      // console.log(this.);
+
+      // if (this.getInput.input === )
+
+      // var elementCount = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+      //
+      //
+      //
+
+    }
+
+    // mind.getInput();
+    // mind.inputRelevance();
+    // mind.inputRelevance();
+    // mind.inputRelevance();
+    // mind.inputRelevance();
+    // mind.inputRelevance();
+    // mind.inputRelevance();
+    // mind.inputRelevance();
+    // mind.inputRelevance();
+    // mind.inputRelevance();
+
+
+    mind.on = true;
+
+    if (mind.on === true) {
+      for (var i = 0; i < mind.memory.length; i++) {
+        mind.inputRelevance();
+        // console.log(mind.on);
+        // console.log(mind.memoryRelevance);
+        // console.log(mind.inputTrigger);
+        // console.log(mind.memory);
+        // console.log(mind.memory.length);
+      }
+    }
+  </script>
+
+</body>
+
+</html>
